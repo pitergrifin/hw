@@ -20,7 +20,6 @@ static const std::vector<TestCaseData> testCases = {
     {"",               "",             ""}
 };
 
-
 TEST_CASE("deleteSpaces removes all spaces", "[deleteSpaces]") {
     for (auto tc : testCases) {
         int numCh = deleteSpaces(tc.input);
