@@ -10,3 +10,4 @@ add_library(common STATIC ${CMAKE_SOURCE_DIR}/common/Tree.cpp)
 
 add_subdirectory(${CMAKE_SOURCE_DIR}/hw1)
 add_subdirectory(${CMAKE_SOURCE_DIR}/hw2)
+add_subdirectory(${CMAKE_SOURCE_DIR}/hw3)

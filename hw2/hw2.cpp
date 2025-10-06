@@ -4,6 +4,9 @@
 #include <unordered_set>
 #include <queue>
 #include "hw2.hpp"
+#include <memory_resource>
+#include <cstddef>
+#include <array>
 
 int sumOfNodes(TreeNode* head) { 
     int dist{0};
@@ -97,3 +100,10 @@ std::vector<int> Solution::distanceK(TreeNode* root, TreeNode* target, int k) {
     }
     return std::vector<int>();
 }
+
+
+std::array<std::byte, 1000*sizeof(int)> buff;
+std::pmr::monotonic_buffer_resource mr(buff.data(), buff.size());
+std::pmr::vector<int> vec(&mr);
+
+std::pmr::unordered_map<int, int> map(&mr);
